@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model Survey
+
+<div class="text-center">
+    <div id="container">
+        <form action="process" method="post">
+            <div id="form">
+                <div>
+                    <label for="Name">Name: </label>
+                </div>
+                <div class="inputtext">
+                    <input asp-for="Name">
+                </div>
+                <div>
+                    <label for="Location">Dojo Location</label>
+                </div>
+                <div>
+                    <select asp-for="Location" id="location">
+                        <option>Bellevue</option>
+                        <option>Boise</option>
+                        <option>Chicago</option>
+                        <option>Los Angeles</option>
+                        <option>Silicon Valley</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="Language">Favorite Language</label>
+                </div>
+                <div>
+                    <select asp-for="Language" id="language">
+                        <option>Python</option>
+                        <option>Java</option>
+                        <option>C#</option>
+                        <option>JavaScript</option>
+                    </select>
+                </div>      
+                <div>
+                    <label for="Comments">Comments </label>
+                </div>
+                <div class="inputtext">
+                    <textarea asp-for="Comments" cols="35" rows="7" placeholder="(optional)"></textarea>
+                </div>
+                <button value="submit" class="btn">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
