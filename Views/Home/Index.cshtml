@@ -13,35 +13,41 @@
                 </div>
                 <div class="inputtext">
                     <input asp-for="Name">
+                    <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
                 <div>
                     <label for="Location">Dojo Location</label>
                 </div>
                 <div>
                     <select asp-for="Location" id="location">
+                        <option hidden selected disabled>Location</option>
                         <option>Bellevue</option>
                         <option>Boise</option>
                         <option>Chicago</option>
                         <option>Los Angeles</option>
                         <option>Silicon Valley</option>
                     </select>
+                    <span asp-validation-for="Location" class="text-danger"></span>
                 </div>
                 <div>
                     <label for="Language">Favorite Language</label>
                 </div>
                 <div>
                     <select asp-for="Language" id="language">
+                        <option hidden selected disabled>Language</option>
                         <option>Python</option>
                         <option>Java</option>
                         <option>C#</option>
                         <option>JavaScript</option>
                     </select>
+                    <span asp-validation-for="Language" class="text-danger"></span>
                 </div>      
                 <div>
                     <label for="Comments">Comments </label>
                 </div>
                 <div class="inputtext">
                     <textarea asp-for="Comments" cols="35" rows="7" placeholder="(optional)"></textarea>
+                    <span asp-validation-for="Comments" class="text-danger"></span>
                 </div>
                 <button value="submit" class="btn">Submit</button>
             </div>

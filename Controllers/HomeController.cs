@@ -29,9 +29,16 @@ namespace dojo_survery_model.Controllers
         [HttpPost("process")]
         public IActionResult Process(Survey newSurvey)
         {
-            oneSurvey = newSurvey;
-            return RedirectToAction("Result");
+            if(ModelState.IsValid)
+            {
+                oneSurvey = newSurvey;
+                return RedirectToAction("Result");
+            } else {
+                return View ("Index");
+            }
+            
         }
+
 
         [HttpGet("Result")]
         public IActionResult Result()
